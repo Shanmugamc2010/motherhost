@@ -7,6 +7,7 @@ export const AppColors = {
   Green: '#62C771',
   Red: '#E95563',
   Text: '#63707E',
+  Gray: 'AppFonts.Text'
 };
 
 
