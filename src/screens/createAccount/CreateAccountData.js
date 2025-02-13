@@ -6,7 +6,7 @@ export const CreateAccountData = {
     PASSWORD: '*Password',
     EMAIL_ADDRESS_EG: 'Eg:Motherhost.com',
     PASSWORD_EG: 'Eg: Motherhost.com123',
-    ALRDY_HV_ACCNT: 'Already have an account?',
+    ALRDY_HV_ACCNT: 'Already have an account? ',
     QUSTION_MARK: '?',
     NEW_TO_MOTHERHOST: 'New to Motherhost Create an',
     ACCOUNT: 'Account',

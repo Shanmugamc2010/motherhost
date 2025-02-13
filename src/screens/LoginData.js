@@ -4,9 +4,9 @@ export const LoginData = {
         PASSWORD: 'Password',
         EMAIL_ADDRESS_EG: 'Eg:Motherhost.com',
         PASSWORD_EG: 'Eg: Motherhost.com123',
-        NEED_TO_FIND_YOUR: 'Need to find your',
-        QUSTION_MARK: '?',
+        NEED_TO_FIND_YOUR: 'Need to find your ',
+        QUSTION_MARK: ' ?',
         NEW_TO_MOTHERHOST: 'New to Motherhost Create an',
-        ACCOUNT: 'Account',
-        MOTHERS_WEB: 'www.motherhost.com'
+        ACCOUNT: ' Account',
+        MOTHERS_WEB: 'www.motherhost.com',
 }

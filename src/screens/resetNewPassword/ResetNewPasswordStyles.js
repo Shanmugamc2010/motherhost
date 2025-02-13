@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { AppColors, AppFonts } from '../../themes/AppThemes';
 
-export const ResetPasswordStyles = StyleSheet.create({
+export const ResetNewPasswordStyles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: AppColors.Secoundary,
@@ -11,6 +11,15 @@ export const ResetPasswordStyles = StyleSheet.create({
         fontSize: 24,
         color: AppColors.Primary,
         fontFamily: AppFonts.Light,
+        paddingLeft:40, 
+        paddingTop:60, 
+        width: '80%', 
+        lineHeight: 30, 
+    },
+    resetPwdRequest: {
+        fontSize: 14,
+        color: AppColors.Green,
+        fontFamily: AppFonts.SemiBold,
         paddingLeft:40, 
         paddingTop:60, 
         width: '80%', 

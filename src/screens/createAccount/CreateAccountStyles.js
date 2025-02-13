@@ -22,12 +22,13 @@ export const CreateAccountStyles = StyleSheet.create({
     },
     highlightText: {
     fontWeight: 'bold',
-    color: '#007AFF',
+    color: AppColors.Event,
+    textDecorationLine: 'underline'
   },
   createAccntTxt: {
     fontSize: 14,
     marginTop: 10,
-    color: '#333',
+    color: AppColors.Text,
     alignSelf: 'center', 
     fontWeight: 'bold',
   },

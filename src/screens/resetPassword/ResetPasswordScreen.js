@@ -6,7 +6,7 @@ import {MHRoundedTextInput} from '../../components/MHRoundedTextInput';
 import { ResetPasswordData } from './ResetPasswordData';
 
 
-const ResetPasswordScreen = () => {
+const ResetPasswordScreen = ({navigation}) => {
   return (
     <View style={ResetPasswordStyles.container}>
       <AppBar />
