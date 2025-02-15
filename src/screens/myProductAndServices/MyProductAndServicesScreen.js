@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, FlatList, StatusBar } from 'react-native';
+import { View, Text, FlatList, StatusBar, SafeAreaView } from 'react-native';
 import { services, myProductAndSeervicesData } from '../myProductAndServices/MyProductAndServicesData';
 import { styles } from '../myProductAndServices/MyProductAndServicesStyles';
 
@@ -41,7 +41,7 @@ import { styles } from '../myProductAndServices/MyProductAndServicesStyles';
 
 function ServiceScreen({ navigation }) {
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
 
             {/* Header */}
             <View style={styles.header}>
@@ -59,7 +59,7 @@ function ServiceScreen({ navigation }) {
                 renderItem={({ item }) => <ServiceCard {...item} />}
                 contentContainerStyle={styles.listContainer}
             />
-        </View>
+        </SafeAreaView>
     );
 }
 

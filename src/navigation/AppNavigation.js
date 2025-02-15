@@ -14,8 +14,8 @@ export default function AppNavigation() {
   return (
     <NavigationContainer>
      <Stack.Navigator  screenOptions={{ headerShown: false}}>
-     <Stack.Screen name={SCREENS.MY_PRODUCT_AND_SERVICES} component={ServiceScreen} />
      <Stack.Screen name={SCREENS.LOG_IN} component={LoginScreen} />
+     <Stack.Screen name={SCREENS.MY_PRODUCT_AND_SERVICES} component={ServiceScreen} />
      <Stack.Screen name={SCREENS.CREATE_ACCOUNT} component={CreateAccount} />
      <Stack.Screen name={SCREENS.RESET_PASSWORD} component={ResetPasswordScreen} />
     </Stack.Navigator>
