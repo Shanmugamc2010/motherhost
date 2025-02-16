@@ -8,14 +8,15 @@ export const CreateAccountStyles = StyleSheet.create({
         alignItems: 'center',
     },
     createAccntHeader: {
-            fontSize: 24,
+            fontSize: 30,
             color: AppColors.Primary,
             fontFamily: AppFonts.Light,
-           paddingLeft:40, 
+           paddingLeft:60, 
            paddingTop:60, 
             width: '80%', 
             lineHeight: 30, 
-            paddingBottom:20
+            paddingBottom:20,
+             alignSelf: 'center', 
         },
     textViewStyle: {
         width: '90%',
@@ -23,7 +24,9 @@ export const CreateAccountStyles = StyleSheet.create({
     highlightText: {
     fontWeight: 'bold',
     color: AppColors.Event,
-    textDecorationLine: 'underline'
+    textDecorationLine: 'underline',
+    alignSelf: 'center', 
+    fontSize: 14,
   },
   createAccntTxt: {
     fontSize: 14,

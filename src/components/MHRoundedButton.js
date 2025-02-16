@@ -1,16 +1,23 @@
 import React from 'react';
-import {StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {StyleSheet, TouchableOpacity, Text,KeyboardAvoidingView, ScrollView, Platform,} from 'react-native';
 import {AppColors} from '../themes/AppThemes';
 
 export const MHRoundedButton = props => {
-  const {buttonTitle} = props;
+  const {buttonTitle, onPress} = props;
   return (
-    <TouchableOpacity style={styles.container}>
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+    >
+    <ScrollView contentContainerStyle={styles.scrollContainer}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Text
       style={styles.buttonContainer}>
         {buttonTitle}
       </Text>
     </TouchableOpacity>
+    </ScrollView>
+    </KeyboardAvoidingView>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import { Keyboard, TouchableWithoutFeedback, ScrollView, KeyboardAvoidingView, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
 import {CreateAccountStyles} from './CreateAccountStyles';
 import { loginStyles } from '../LoginStyles';
 import {AppBar} from '../../components/AppBar';
@@ -12,7 +12,13 @@ const CreateAccount = ({navigation}) => {
 
   
   return (
-    <View style={loginStyles.container}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      style={{ flex: 1 }}
+    >
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+    <ScrollView contentContainerStyle={{ flexGrow: 1, padding: 20 }}>
+    <SafeAreaView style={loginStyles.container}>
       <AppBar />
       <Text style={CreateAccountStyles.createAccntHeader}>{CreateAccountData.CREATE_ACCOUNT}</Text>
       <View style={loginStyles.textViewStyle}>
@@ -36,13 +42,16 @@ const CreateAccount = ({navigation}) => {
         <MHRoundedButton buttonTitle={CreateAccountData.CREATE_ACCNT} />
       </View>
       <View>
-      <Text style={CreateAccountStyles.createAccntTxt}>{CreateAccountData.ALRDY_HV_ACCNT} 
       <TouchableOpacity >
+      <Text style={CreateAccountStyles.createAccntTxt}>{CreateAccountData.ALRDY_HV_ACCNT}  
       <Text onPress={() => navigation.navigate(SCREENS.LOG_IN)}  style={CreateAccountStyles.highlightText}>{CreateAccountData.SIGN_IN}</Text>
-      </TouchableOpacity>
       </Text>
+      </TouchableOpacity> 
       </View>
-    </View>
+      </SafeAreaView>
+      </ScrollView>
+      </TouchableWithoutFeedback>
+    </KeyboardAvoidingView>
   );
 };
 
