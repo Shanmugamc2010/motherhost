@@ -13,8 +13,6 @@ export default StyleSheet.create({
   header: {
     backgroundColor: AppColors.Secoundary,
     padding: 10,
-    // borderBottomLeftRadius: 20,
-    // borderBottomRightRadius: 20,
     alignItems: 'center',
     
   },

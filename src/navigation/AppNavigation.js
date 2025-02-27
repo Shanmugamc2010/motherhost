@@ -7,6 +7,7 @@ import CreateAccount from '../screens/createAccount/CreateAccountScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ServiceScreen from '../screens/myProductAndServices/MyProductAndServicesScreen';
 import DomainRegistration from '../screens/domainRegistration/DomainRegistration';
+import HostingScreen from '../screens/hosting/HostingScreen';
 import { SCREENS } from './Screens';
 
 const Stack = createNativeStackNavigator();
@@ -15,6 +16,7 @@ export default function AppNavigation() {
   return (
     <NavigationContainer>
      <Stack.Navigator  screenOptions={{ headerShown: false}}>
+     <Stack.Screen name={SCREENS.HOSTING} component={HostingScreen} />
      <Stack.Screen name={SCREENS.DomainRegistration} component={DomainRegistration} />
      <Stack.Screen name={SCREENS.LOG_IN} component={LoginScreen} />
      <Stack.Screen name={SCREENS.MY_PRODUCT_AND_SERVICES} component={ServiceScreen} />
