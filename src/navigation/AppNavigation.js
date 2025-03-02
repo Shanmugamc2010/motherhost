@@ -9,6 +9,7 @@ import ServiceScreen from '../screens/myProductAndServices/MyProductAndServicesS
 import DomainRegistration from '../screens/domainRegistration/DomainRegistration';
 import HostingScreen from '../screens/hosting/HostingScreen';
 import { SCREENS } from './Screens';
+import HomeScreenn from '../screens/home/Home';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,9 +17,10 @@ export default function AppNavigation() {
   return (
     <NavigationContainer>
      <Stack.Navigator  screenOptions={{ headerShown: false}}>
+     <Stack.Screen name={SCREENS.HOME} component={HomeScreenn} />
+     <Stack.Screen name={SCREENS.LOG_IN} component={LoginScreen} />
      <Stack.Screen name={SCREENS.HOSTING} component={HostingScreen} />
      <Stack.Screen name={SCREENS.DomainRegistration} component={DomainRegistration} />
-     <Stack.Screen name={SCREENS.LOG_IN} component={LoginScreen} />
      <Stack.Screen name={SCREENS.MY_PRODUCT_AND_SERVICES} component={ServiceScreen} />
      <Stack.Screen name={SCREENS.CREATE_ACCOUNT} component={CreateAccount} />
      <Stack.Screen name={SCREENS.RESET_PASSWORD} component={ResetPasswordScreen} />
