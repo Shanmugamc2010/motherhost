@@ -7,6 +7,7 @@ export const  SCREENS = {
     HOSTING: "Hosting",
     DOMAIN: "Domain",
     BOTTOM_SHEET: "BottomSheet",
-    SIDEBAR: "Sidebar"
+    SIDEBAR: "Sidebar",
+    HOME: "Home"
     
 }

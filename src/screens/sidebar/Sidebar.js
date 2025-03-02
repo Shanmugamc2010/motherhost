@@ -22,6 +22,7 @@ const Sidebar = ({ navigation }) => {
         </TouchableOpacity>
       </View>
       
+      <View style={styles.blueLine} />
     </View>
   );
 };

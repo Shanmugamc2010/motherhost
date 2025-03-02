@@ -10,7 +10,7 @@ import DomainRegistration from '../screens/domainRegistration/DomainRegistration
 import HostingScreen from '../screens/hosting/HostingScreen';
 import DomainScreen from '../screens/domain/DomainScreen';
 import BottomSheet from '../screens/bottomSheet/BottomSheetScreen';
-import Sidebar from '../screens/sidebar/Sidebar'
+import Sidebar from '../screens/sidebar/Sidebar';
 import { SCREENS } from './Screens';
 import HomeScreenn from '../screens/home/Home';
 import { navigationRef } from './NavigationService';
