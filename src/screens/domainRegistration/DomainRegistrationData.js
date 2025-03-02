@@ -8,5 +8,5 @@ export const DomainRegData = {
     TAX_RATE : "*Exclusive taxes rate",
     VALIDITY :"3 Years Validity",
     RENEW : "Renew your product",
-    AMOUNT : "₹8,257.00"
+    AMOUNT : "₹8,257.00",
 }

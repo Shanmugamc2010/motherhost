@@ -1,11 +1,16 @@
-import React from "react";
-import { View, Text, TouchableOpacity, SafeAreaView, Image } from "react-native";
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity, SafeAreaView, Image, TextInput } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
+import Modal from "react-native-modal";
 import styles from "./DomainRegistrationStyles";
 import { DomainRegData } from "./DomainRegistrationData";
 
 const DomainRegistrationScreen = () => {
+  const [isModalVisible, setModalVisible] = useState(false);
+  const [nameServer1, setNameServer1] = useState("Name Server 1");
+  const [nameServer2, setNameServer2] = useState("Name Server 2");
+
   return (
     <SafeAreaView style={styles.container}>
       {/* Header */}
@@ -45,7 +50,9 @@ const DomainRegistrationScreen = () => {
         {/* Name Servers */}
         <View style={styles.nameServers}>
           <Text style={styles.domainText}>{DomainRegData.NAME_SERVERS}</Text>
+          <TouchableOpacity onPress={() => setModalVisible(true)}>
           <FontAwesome name="pencil" style={styles.editIcon} />
+          </TouchableOpacity>
           <View style={styles.servers}>
           <Text style={styles.label}>Name Server 1</Text>
           <Text style={styles.value}>lnx1.motherhost.com</Text>
@@ -70,6 +77,38 @@ const DomainRegistrationScreen = () => {
         </TouchableOpacity>
       </View>
       </View>
+            {/* Bottom Sheet Modal */}
+        <Modal isVisible={isModalVisible} onBackdropPress={() => setModalVisible(false)} style={styles.bottomModal}>
+        <View style={styles.modalContainer}>
+          <Text style={styles.modalTitle}>{DomainRegData.NAME_SERVERS}</Text>
+
+          <TextInput
+            style={styles.modalInput}
+            placeholder="Name Server 1"
+            value={nameServer1}
+            onChangeText={setNameServer1}
+          />
+
+          <TextInput
+            style={styles.modalInput}
+            placeholder="Name Server 2"
+            value={nameServer2}
+            onChangeText={setNameServer2}
+          />
+
+          <View style={styles.buttonRow}>
+            <TouchableOpacity style={styles.cancelButton} onPress={() => setModalVisible(false)}>
+              <Text style={styles.cancelText}>Cancel</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.updateButton}
+              onPress={() => setModalVisible(false)}
+            >
+              <Text style={styles.updateText}>Update</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 };

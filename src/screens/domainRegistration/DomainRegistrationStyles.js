@@ -110,5 +110,58 @@ export default StyleSheet.create({
   },
   eventColor: {
     color: AppColors.Event,
-  }
+  },
+  bottomModal: {
+    justifyContent: "flex-end",
+    margin: 0,
+  },
+  modalContainer: {
+    backgroundColor: AppColors.White,
+    padding: 20,
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 10,
+    color: AppColors.Text
+  },
+  modalInput: {
+    borderWidth: 1,
+    borderColor: AppColors.Secoundary,
+    padding: 10,
+    borderRadius: 10,
+    marginBottom: 10,
+    color: AppColors.Text
+  },
+  buttonRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 10,
+  },
+  cancelButton: {
+    flex: 1,
+    backgroundColor: AppColors.Event,
+    padding: 10,
+    borderRadius: 5,
+    marginRight: 5,
+    alignItems: "center",
+  },
+  updateButton: {
+    flex: 1,
+    backgroundColor: AppColors.Green,
+    padding: 10,
+    borderRadius: 5,
+    marginLeft: 5,
+    alignItems: "center",
+  },
+  cancelText: {
+    color: AppColors.White,
+    fontWeight: "bold",
+  },
+  updateText: {
+    color: AppColors.White,
+    fontWeight: "bold",
+  },
 });
