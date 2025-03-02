@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   View,
   Text,
@@ -17,7 +17,14 @@ import { MHRoundedTextInput } from "../../components/MHRoundedTextInput";
 import { DomainCards } from "./homeMicroComponents/DomainCards";
 import { HomeTitleText } from "./homeMicroComponents/HomeTitleText";
 import { ProductAndServicesCards } from "./homeMicroComponents/ProductAndServicesCards";
+import { useSelector } from "react-redux";
+import { selectToken } from "../../redux/slices/AuthSlice";
+
 const HomeScreenn = () => {
+  const token = useSelector(selectToken);
+  useEffect(() => {
+    console.log('==> step 8', token); //Might multiple time
+  },[token])
   const header = () => {
     return (
       <View style={styles.headerView}>
@@ -83,7 +90,7 @@ const HomeScreenn = () => {
   const productAndServices = () => {
     return <View style={styles.prductAndServicesStyle}> 
         <HomeTitleText title={HomeData.MY_PRCDUCT_AND_SERVICES} />
-        <ProductAndServicesCards title={'7 Sevices'} />
+        <ProductAndServicesCards title={token} />
         <ProductAndServicesCards title={'3 Tickets'} />
 
     </View>
