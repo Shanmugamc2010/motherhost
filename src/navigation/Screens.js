@@ -3,8 +3,10 @@ export const  SCREENS = {
     CREATE_ACCOUNT: "CreateAccount",
     RESET_PASSWORD: "ResetPassword",
     MY_PRODUCT_AND_SERVICES: "MyProductAndServices",
-    DomainRegistration: "DomainRegistration",
+    DOMAIN_REGISTRATION: "DomainRegistration",
     HOSTING: "Hosting",
-    HOME: "Home"
+    DOMAIN: "Domain",
+    BOTTOM_SHEET: "BottomSheet",
+    SIDEBAR: "Sidebar"
     
 }
