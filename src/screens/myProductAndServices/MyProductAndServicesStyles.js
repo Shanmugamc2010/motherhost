@@ -32,14 +32,14 @@ export const styles = StyleSheet.create({
     backgroundColor: AppColors.White,
     padding: 16,
     borderRadius: 12,
-    shadowColor: '#000',
+    shadowColor: AppColors.Event,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 4,
     marginBottom: 16,
     borderWidth: 1,
-    borderColor: '#e5e7eb',
+    borderColor: AppColors.Event,
   },
   website: {
     fontSize: 16,
@@ -102,19 +102,19 @@ export const styles = StyleSheet.create({
   },
   dateText: {
     fontSize: 14,
-    color: AppFonts.Text,
+    color: AppColors.Text,
     fontWeight: 'bold',
     
   },
   secDateText: {
     fontSize: 14,
-    color: AppFonts.Text,
+    color: AppColors.Text,
     paddingBottom:3,
     fontWeight: 'bold',
   },
   validity: {
     fontSize: 12,
-    color: AppFonts.Text,
+    color: AppColors.Text,
     marginTop: 10,
     
   },
