@@ -9,6 +9,7 @@ export const MHRoundedTextInput = props => {
       <Text style={styles.titleTxtStyle}>{title}</Text>
       <TextInput style={styles.textInputStyle}
         placeholder={placeholder}
+        {...props}
       />
     </View>
   );

@@ -4,6 +4,7 @@ export const  SCREENS = {
     RESET_PASSWORD: "ResetPassword",
     MY_PRODUCT_AND_SERVICES: "MyProductAndServices",
     DomainRegistration: "DomainRegistration",
-    HOSTING: "Histing"
+    HOSTING: "Hosting",
+    HOME: "Home"
     
 }
